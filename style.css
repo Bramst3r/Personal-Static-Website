@@ -65,7 +65,7 @@
         background-image: url(XMedia/Other/Background05.png);
         background-attachment: fixed;
         background-size: 2750px;
-        background-position-y: 1500px;
+        background-position-y: 1650px;
         transition-duration: 1s;
         animation: pixels infinite;
         animation-duration: 90s;
@@ -75,7 +75,7 @@
     @keyframes pixels {
         0% {
             background-position-x: 0%;
-            background-position-y: 1500px;
+            background-position-y: 1650px;
         }
 
         50% {
