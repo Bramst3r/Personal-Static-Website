@@ -1,6 +1,6 @@
             
     p,h1,h2,h3,a {
-        color: rgb(222, 222, 222);
+        color: beige;
         font-family: Arial, Helvetica, sans-serif;
     }
 
@@ -12,15 +12,15 @@
     h1, h3 {
         text-align: center;
         padding: 0px 0%;
+        margin: 0px 0px;
     }
 
     a {
         font-size: larger;
-        text-decoration: none;
     }
 
     a.link {
-        color: rgb(83, 83, 83)
+        color: rgba(193,170,129,1)
     }
 
     a.link:hover {
@@ -36,8 +36,25 @@
         display: flex;
         justify-content: center;
         padding: 15px 30px;
-        margin-bottom: 30px;
-        background: linear-gradient(140deg, rgb(0, 0, 0) 0%, rgba(133, 133, 133, 0.7) 100%);
+        margin-bottom: 0px;
+        background: linear-gradient(140deg, #c1aa81 0%, rgba(0, 0, 0, 0.9) 100%);
+        background-attachment: fixed;
+        background-size: 175% 175%;
+        animation: gradient 10s ease-in-out infinite;
+        transition: 2s;  
+        -webkit-transition: transform 2s  
+       }
+
+    @keyframes gradient {
+        0% {
+            background-position: 0% 100%;
+        }
+        50% {
+            background-position: 100% 100%;
+        }
+        100% {
+            background-position: 0% 100%;
+        }
     }
 
 /*----- Image Grid -----*/
@@ -64,25 +81,24 @@
 
 /*----- Background -----*/
     body {
-        background: linear-gradient(324deg, #6f6f6f 0%, #000000 100%);
-        background-image: url(X.\ Media/Background.png);
+        background-image: url(XMedia/Other/Background02.png);
         background-attachment: fixed;
-        background-size: 150% 150%;
-        animation: gradient 120s ease-out infinite;
+
+        animation: pixels 180 ease-out infinite;
         height: 100vh;
         transition: 2s;  
         -webkit-transition: transform 2s  
        }
 
-    @keyframes gradient {
+    @keyframes pixels {
         0% {
-            background-position: 0% 75%;
+            background-position: 100% 0%;
         }
         50% {
-            background-position: 50% 0%;
+            background-position: 0% 0%;
         }
         100% {
-            background-position: 0% 50%;
+            background-position: 100% 0%;
         }
     }
 /*----- Images & Videos -----*/
@@ -90,6 +106,7 @@
         margin: 10px 20px;
         object-fit: inherit;
         overflow: hidden;
+        border-radius: 10px;
     }
 
     img.coverlink {
@@ -99,17 +116,21 @@
         max-width: 150px;
         max-height: 150px;
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.678);
+        border-radius: 1px;
         transition: 0.3s;
+        opacity: 0.7;
     }
             
     img.coverlink:hover {
-        box-shadow: 0px 8px 16px 0px rgb(255, 255, 255);
+        box-shadow: 0px 8px 16px 0px beige;
         border-radius: 25px;
+        opacity: 1
     }
 
     video{
         width: 100%;
         height: 100%;
+        border-radius: 25px;
         max-width: 320px;
         max-height: 180px;
         margin: 10px 20px;
@@ -123,18 +144,19 @@
         height: 50px;
         margin: 7px 10px;
         border: none;
-        color: rgb(216, 216, 216);
+        color: beige;
         padding: 10px 15px;
         text-align: left;
         font-size: 25px;
-        background: linear-gradient(130deg, rgb(132, 132, 132) 0%, rgba(0, 0, 0, 0) 50%);
+        background: linear-gradient(130deg, rgba(193,170,129,1) 0%, rgba(0, 0, 0, 0) 50%);
         transition: 0.3s;
         cursor: pointer;
+        text-decoration: none;
     }
 
     button:hover {                
         padding: 10px 32px;
-        background-color: rgb(71, 71, 71)
+        background-color: rgba(193,170,129,1)
     }
             
 /*----- navigation bar style -----*/
@@ -147,7 +169,7 @@
         display: flex;
         list-style-type: none;
         padding: 0;
-        background: linear-gradient(130deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
+        background: linear-gradient(130deg, rgba(193,170,129,1) 0%, rgba(0, 0, 0, 0.8) 100%);
         position: static;
         width:max-content;
     }
@@ -164,7 +186,7 @@
     }
 
     li:hover, .dropdown:hover .dropbtn {
-        background-color: rgb(100, 100, 100);
+        background-color: rgba(193,170,129,1);
 
     }
 
@@ -175,7 +197,7 @@
     .dropdown-content {
         display: none;
         position: absolute;
-        background: linear-gradient(324deg, rgb(232, 232, 232) 0%, rgba(0,0,0,1) 150%);
+        background: linear-gradient(324deg, rgba(193,170,129,1) 0%, rgba(0,0,0,1) 200%);
         min-width: 100px;
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.638);
         z-index: 1;
@@ -191,7 +213,7 @@
     }
 
     .dropdown-content a:hover {
-        background-color: rgb(212, 212, 212);        
+        background-color: rgba(193,170,129,1);        
 
     }
 

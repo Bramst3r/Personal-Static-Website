@@ -1,6 +1,6 @@
             
     p,h1,h2,h3,a {
-        color: beige;
+        color: rgb(238, 238, 238);
         font-family: Arial, Helvetica, sans-serif;
     }
 
@@ -20,24 +20,26 @@
     }
 
     a.link {
-        color: rgba(193,170,129,1)
+        color: rgb(255, 255, 255)
     }
 
     a.link:hover {
-        color: rgb(0, 0, 0)
+        color: rgb(38, 38, 38)
     }
 
-
-
-/*----- Blocks -----*/
+    
+/*----------------------*/
+/*------- Blocks -------*/
+/*----------------------*/
     div.textblock {
         width: 80%;
         max-width: 1100px;
         display: flex;
         justify-content: center;
+        text-align: center;
         padding: 15px 30px;
         margin-bottom: 0px;
-        background: linear-gradient(140deg, #c1aa81 0%, rgba(0, 0, 0, 0.9) 100%);
+        background: linear-gradient(140deg, #b6b6b6 0%, rgba(0, 0, 0, 0.9) 100%);
         background-attachment: fixed;
         background-size: 175% 175%;
         animation: gradient 10s ease-in-out infinite;
@@ -56,52 +58,38 @@
             background-position: 0% 100%;
         }
     }
-
-/*----- Image Grid -----*/
-    /* Create two equal columns that floats next to each other */
-.column {
-    float: right;
-    width: 100%;
-    padding: 0px 0px;
-    margin: 0px 0px;
-    
-  }
-  
-  .column img {
-    margin-top: 0px;
-  }
-  
-    /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-
-
+/*----------------------*/
 /*----- Background -----*/
+/*----------------------*/
     body {
-        background-image: url(XMedia/Other/Background02.png);
+        background-image: url(XMedia/Other/Background05.png);
         background-attachment: fixed;
-
-        animation: pixels 180 ease-out infinite;
-        height: 100vh;
-        transition: 2s;  
-        -webkit-transition: transform 2s  
+        background-size: 2500px;
+        background-position-y: 1500px;
+        transition-duration: 1s;
+        animation: pixels infinite;
+        animation-duration: 90s;
+        animation-timing-function: linear;
        }
 
     @keyframes pixels {
         0% {
-            background-position: 100% 0%;
+            background-position-x: 0%;
+            background-position-y: 1500px;
         }
+
         50% {
-            background-position: 0% 0%;
+            background-position-x: 100%;
         }
+
         100% {
-            background-position: 100% 0%;
+            background-position-x: 0%;
         }
     }
-/*----- Images & Videos -----*/
+
+/*-----------------------*/
+/*--- Images & Videos ---*/
+/*-----------------------*/
     img {
         margin: 10px 20px;
         object-fit: inherit;
@@ -113,8 +101,8 @@
         width: 100%;
         height: 100%;
         margin: 20px 10px;
-        max-width: 150px;
-        max-height: 150px;
+        max-width: 160px;
+        max-height: 160px;
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.678);
         border-radius: 1px;
         transition: 0.3s;
@@ -122,7 +110,7 @@
     }
             
     img.coverlink:hover {
-        box-shadow: 0px 8px 16px 0px beige;
+        box-shadow: 0px 8px 16px 0px rgb(255, 255, 255);
         border-radius: 25px;
         opacity: 1
     }
@@ -136,30 +124,36 @@
         margin: 10px 20px;
         object-fit: inherit;
         overflow: hidden;
+        cursor: pointer;
     }
 
-/*----- button style -----*/
+/*---------------------*/
+/*------ Buttons ------*/
+/*---------------------*/
     button {
-        width: 300px;
-        height: 50px;
-        margin: 7px 10px;
+        width: 400px;
+        height: auto;
+        margin: 10px 25px;
         border: none;
-        color: beige;
-        padding: 10px 15px;
+        float: left;
+        color: rgb(255, 255, 255);
+        padding: 20px 20px;
         text-align: left;
-        font-size: 25px;
-        background: linear-gradient(130deg, rgba(193,170,129,1) 0%, rgba(0, 0, 0, 0) 50%);
+        font-size: 35px;
+        font-weight: 700;
+        background: linear-gradient(130deg, rgb(151, 151, 151) 0%, rgba(0, 0, 0, 0) 50%);
         transition: 0.3s;
-        cursor: pointer;
-        text-decoration: none;
     }
 
     button:hover {                
-        padding: 10px 32px;
-        background-color: rgba(193,170,129,1)
+        padding: 20px 35px;
+        background-color: rgb(39, 39, 39);
+        cursor: pointer;
     }
-            
-/*----- navigation bar style -----*/
+
+/*----------------------*/
+/*--- Navigation Bar ---*/
+/*----------------------*/
     div.navbar {
         display: flex;
         justify-content: center;
@@ -169,13 +163,13 @@
         display: flex;
         list-style-type: none;
         padding: 0;
-        background: linear-gradient(130deg, rgba(193,170,129,1) 0%, rgba(0, 0, 0, 0.8) 100%);
+        background: linear-gradient(130deg, rgb(173, 173, 173) 0%, rgba(94, 94, 94, 0.8) 100%);
         position: static;
         width:max-content;
     }
 
     li {
-        transition: 0.3s;
+        transition: 0.5s;
     }
 
     li a, .dropbtn {
@@ -186,8 +180,7 @@
     }
 
     li:hover, .dropdown:hover .dropbtn {
-        background-color: rgba(193,170,129,1);
-
+        background-color: rgba(37, 37, 37, 0.5);
     }
 
     li.dropdown {
@@ -197,7 +190,7 @@
     .dropdown-content {
         display: none;
         position: absolute;
-        background: linear-gradient(324deg, rgba(193,170,129,1) 0%, rgba(0,0,0,1) 200%);
+        background: linear-gradient(324deg, rgb(137, 137, 137) 0%, rgba(0,0,0,1) 200%);
         min-width: 100px;
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.638);
         z-index: 1;
@@ -205,7 +198,7 @@
 
     .dropdown-content a {
         display: block;
-        color: black;
+        color: rgb(255, 255, 255);
         padding: 12px 16px;
         text-decoration: none;
         text-align: left;
@@ -213,8 +206,7 @@
     }
 
     .dropdown-content a:hover {
-        background-color: rgba(193,170,129,1);        
-
+        background-color: rgba(37, 37, 37, 0.5);      
     }
 
     .dropdown:hover .dropdown-content {
