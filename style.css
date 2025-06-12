@@ -43,8 +43,6 @@
         background-attachment: fixed;
         background-size: 175% 175%;
         animation: gradient 10s ease-in-out infinite;
-        transition: 2s;  
-        -webkit-transition: transform 2s  
        }
 
     @keyframes gradient {
@@ -62,11 +60,10 @@
 /*----- Background -----*/
 /*----------------------*/
     body {
-        background-image: url(XMedia/Other/Background05.png);
+        background-image: url(XMedia/Other/Background01.png);
         background-attachment: fixed;
         background-size: 2750px;
         background-position-y: 1650px;
-        transition-duration: 1s;
         animation: pixels infinite;
         animation-duration: 90s;
         animation-timing-function: linear;
@@ -122,8 +119,6 @@
         max-width: 320px;
         max-height: 180px;
         margin: 10px 20px;
-        object-fit: inherit;
-        overflow: hidden;
         cursor: pointer;
     }
 
@@ -170,7 +165,7 @@
     }
 
     li {
-        transition: 0.5s;
+        transition: 0.3s;
     }
 
     li a, .dropbtn {
